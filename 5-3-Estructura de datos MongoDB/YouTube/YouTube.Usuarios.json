@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6599a3a0a64bb0467884b889"
+  },
+  "email": "String",
+  "password": "String",
+  "nombre_usuario": "String",
+  "fecha_nacimiento": "Date",
+  "sexo": "String",
+  "pais": "String",
+  "codigo_postal": "String",
+  "canales_suscritos": [
+    "ObjectId"
+  ],
+  "playlists": [
+    "ObjectId"
+  ],
+  "likes": [
+    "ObjectId"
+  ],
+  "dislikes": [
+    "ObjectId"
+  ]
+}]

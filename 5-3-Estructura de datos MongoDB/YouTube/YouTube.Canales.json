@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "6599a42da64bb0467884b88d"
+  },
+  "nombre": "String",
+  "descripcion": "String",
+  "fecha_creacion": "Date",
+  "usuario_id": "ObjectId"
+}]

@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "6599a47aa64bb0467884b891"
+  },
+  "texto": "String",
+  "fecha_hora": "Date",
+  "usuario_id": "ObjectId",
+  "video_id": "ObjectId"
+}]

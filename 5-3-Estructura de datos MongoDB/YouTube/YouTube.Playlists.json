@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "6599a453a64bb0467884b88f"
+  },
+  "nombre": "String",
+  "fecha_creacion": "Date",
+  "estado": "String",
+  "videos": [
+    "ObjectId"
+  ]
+}]

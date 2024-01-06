@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "6599a3eca64bb0467884b88b"
+  },
+  "titulo": "String",
+  "descripcion": "String",
+  "tamaño": "Number",
+  "nombre_archivo": "String",
+  "duracion": "Number",
+  "thumbnail": "String",
+  "num_reproducciones": "Number",
+  "num_likes": "Number",
+  "num_dislikes": "Number",
+  "estado": "String",
+  "etiquetas": [
+    "String"
+  ],
+  "usuario_id": "ObjectId",
+  "likes_usuarios": [
+    {
+      "usuario_id": "ObjectId",
+      "fecha": "Date"
+    }
+  ],
+  "dislikes_usuarios": [
+    {
+      "usuario_id": "ObjectId",
+      "fecha": "Date"
+    }
+  ],
+  "comentarios": [
+    "ObjectId"
+  ]
+}]
