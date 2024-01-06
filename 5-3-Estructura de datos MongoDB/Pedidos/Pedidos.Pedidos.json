@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "65999a3da64bb0467884b87e"
+  },
+  "cliente_id": "ObjectId",
+  "fecha_hora": "Date",
+  "tipo_entrega": "String",
+  "productos": [
+    {
+      "producto_id": "ObjectId",
+      "cantidad": "Number"
+    }
+  ],
+  "precio_total": "Number",
+  "nota": "String",
+  "tienda_id": "ObjectId"
+}]

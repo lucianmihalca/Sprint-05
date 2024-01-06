@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "65999a65a64bb0467884b880"
+  },
+  "nombre": "String",
+  "descripcion": "String",
+  "imagen": "String",
+  "precio": "Number",
+  "categoria": "String"
+}]

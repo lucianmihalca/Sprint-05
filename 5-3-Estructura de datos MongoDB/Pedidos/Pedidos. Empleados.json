@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "65999abca64bb0467884b884"
+  },
+  "nombre": "String",
+  "apellidos": "String",
+  "NIF": "String",
+  "telefono": "String",
+  "rol": "String",
+  "tienda_id": "ObjectId"
+}]
