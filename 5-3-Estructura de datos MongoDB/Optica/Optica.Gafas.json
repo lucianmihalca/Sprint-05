@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "659964ae3bd76320318eec90"
+  },
+  "marca": "String",
+  "graduacion": {
+    "izquierda": "Number",
+    "derecha": "Number"
+  },
+  "tipo_montura": "String",
+  "color_montura": "String",
+  "color_vidrios": {
+    "izquierdo": "String",
+    "derecho": "String"
+  },
+  "precio": "Number",
+  "proveedor_id": "ObjectId"
+}]

@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "659964273bd76320318eec8c"
+  },
+  "nombre": "String",
+  "direccion_postal": "String",
+  "telefono": "String",
+  "correo_electronico": "String",
+  "fecha_registro": "Date",
+  "cliente_recomendador_id": "ObjectId",
+  "ultimas_compras_id": [
+    "ObjectId"
+  ]
+}]

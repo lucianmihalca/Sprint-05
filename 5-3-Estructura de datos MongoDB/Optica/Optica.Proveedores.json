@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6599646b3bd76320318eec8e"
+  },
+  "nombre": "String",
+  "direccion": {
+    "calle": "String",
+    "numero": "String",
+    "piso": "String",
+    "puerta": "String",
+    "ciudad": "String",
+    "codigo_postal": "String",
+    "pais": "String"
+  },
+  "telefono": "String",
+  "fax": "String",
+  "NIF": "String"
+}]

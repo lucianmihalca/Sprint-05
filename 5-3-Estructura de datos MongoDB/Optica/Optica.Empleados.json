@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "659965163bd76320318eec92"
+  },
+  "nombre": "String",
+  "direccion": "String",
+  "telefono": "String",
+  "correo_electronico": "String",
+  "fecha_ingreso": "Date",
+  "rol": "String"
+}]
