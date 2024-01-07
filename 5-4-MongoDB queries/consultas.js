@@ -1,9 +1,8 @@
 import { MongoClient } from "mongodb";
-import 'dotenv/config';
+import "dotenv/config";
 
 const url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/?authSource=admin`;
 const dbName = process.env.DB_NAME;
-
 
 // 1. Escribe una consulta para mostrar todos los documentos en la colección Restaurantes.
 export async function consulta_1() {
@@ -180,7 +179,29 @@ export async function consulta_10() {
 // 11.1 Consulta para encontrar restaurantes que no cocinan comida "American", con score superior a 70 y longitud inferior a -65.754168.
 // 11.2 '$ne: "American"' excluye restaurantes que cocinan comida "American".
 // 11.3 '$gt: 70' selecciona aquellos con un score mayor que 70 y '$lt: -65.754168' para longitud menor que -65.754168.
+// 11.4 Uso de $and para combinar múltiples condiciones
 export async function consulta_11() {
+  const client = new MongoClient(url);
+  try {
+    await client.connect();
+    const db = client.db(dbName);
+    const results = await db
+      .collection("Data")
+      .find({
+        $and: [{ cuisine: { $ne: "American" } }, { "grades.score": { $gt: 70 } }, { "address.coord.0": { $lt: -65.754168 } }],
+      })
+      .toArray();
+    console.log(results);
+  } finally {
+    await client.close();
+  }
+}
+
+// 12.1 Escribe una consulta para encontrar los restaurantes que no preparan comida 'American' y tienen algún resultado superior a 70 y que, además, se localizan en longitudes inferiores a -65.754168.
+// 12.2 Nota: Haz esta consulta sin utilizar operador $and.
+// 12.3 Se combinan directamente las condiciones en el objeto de consulta para un AND implícito.
+
+export async function consulta_12() {
   const client = new MongoClient(url);
   try {
     await client.connect();
@@ -197,4 +218,46 @@ export async function consulta_11() {
   } finally {
     await client.close();
   }
+}
+
+// 13.1 Escribe una consulta para encontrar los restaurantes que no preparan comida 'American ', tienen alguna nota 'A' y no pertenecen a Brooklyn.
+// 13.2 Se debe mostrar el documento según la cuisine en orden descendente.
+// 13.3 'sort({ cuisine: -1 })' ordena los resultados por el campo 'cuisine' de forma descendente (de Z a A).
+// 13.4 El operador '$ne' excluye los elementos especificados, aquí se usa para excluir cocina 'American' y restaurantes en 'Brooklyn'.
+// 13.5 '"grades.grade": "A"' selecciona restaurantes con una calificación de 'A'.
+export async function consulta_13() {
+  const client = new MongoClient(url);
+  try {
+    await client.connect();
+    const db = client.db(dbName);
+    const results = await db
+      .collection("Data")
+      .find({
+        cuisine: { $ne: "American" },
+        "grades.grade": "A",
+        borough: { $ne: "Brooklyn" },
+      })
+      .sort({ cuisine: -1 })
+      .toArray();
+    console.log(results);
+  } finally {
+    await client.close();
+  }
+}
+
+// 14.1 Escribe una consulta para encontrar el restaurante_id, name, borough y cuisine para aquellos restaurantes que contienen 'Wil' en las tres primeras letras en su nombre.
+export async function consulta_14() {
+    const client = new MongoClient(url);
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const results = await db.collection("Data").find({
+            name: { $regex: /^Wil/ }
+        }, {
+            projection: { restaurant_id: 1, name: 1, borough: 1, cuisine: 1 }
+        }).toArray();
+        console.log(results);
+    } finally {
+        await client.close();
+    }
 }

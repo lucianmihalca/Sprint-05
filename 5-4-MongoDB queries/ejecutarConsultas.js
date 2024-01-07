@@ -35,3 +35,12 @@ if (consultaSeleccionada === 'consulta_10') {
 if (consultaSeleccionada === 'consulta_11') {
     consultas.consulta_11();
 }
+if (consultaSeleccionada === 'consulta_12') {
+    consultas.consulta_11();
+}
+if (consultaSeleccionada === 'consulta_13') {
+    consultas.consulta_11();
+}
+if (consultaSeleccionada === 'consulta_14') {
+    consultas.consulta_11();
+}
