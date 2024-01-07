@@ -1,0 +1,16 @@
+{
+  "name": "5-4-mongodb-queries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "consultas.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
