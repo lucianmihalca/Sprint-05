@@ -1,7 +1,9 @@
 import { MongoClient } from "mongodb";
+import 'dotenv/config';
 
-const url = "mongodb://luk:ariel%40%40401A@localhost:27017/?authSource=admin";
-const dbName = "Restaurantes";
+const url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}:${process.env.DB_PORT}/?authSource=admin`;
+const dbName = process.env.DB_NAME;
+
 
 // 1. Escribe una consulta para mostrar todos los documentos en la colección Restaurantes.
 export async function consulta_1() {
